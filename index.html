@@ -7,18 +7,6 @@
     <link rel="stylesheet" href="./vendor/normalize.css" />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="icon" href="./favicon.ico" type="image/x-icon" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body>
     <header class="header">
@@ -56,10 +44,105 @@
       </div>
     </header>
     <main class="content">
-      <section id="reservation"></section>
+      <section class="reservation" id="reservation">
+        <h2 class="reservation__title">Reservar una mesa</h2>
+        <form class="reservation__form">
+          <fieldset class="reservation__fieldset">
+            <label class="reservation__label" for="name"> Nombre* </label>
+            <input
+              class="reservation__input"
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Nombre"
+              required
+            />
+            <label class="reservation__label" for="guests">
+              Número de comensales*
+            </label>
+            <input
+              class="reservation__input"
+              type="number"
+              min="1"
+              max="8"
+              id="guests"
+              name="guests"
+              placeholder="1-8"
+              required
+            />
+            <label class="reservation__label" for="datetime">
+              Fecha y hora*
+            </label>
+            <input
+              class="reservation__input"
+              type="datetime-local"
+              id="datetime"
+              name="datetime"
+              required
+            />
+            <label class="reservation__label" for="email">
+              Tu correo electrónico*
+            </label>
+            <input
+              class="reservation__input"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="email@email.com"
+              required
+            />
+            <button class="reservation__button" type="submit">
+              Reservar una mesa
+            </button>
+            <label class="reservation__label reservation__label_type_checkbox">
+              <input
+                class="reservation__checkbox"
+                type="checkbox"
+                name="terms"
+                id="terms"
+                required
+              />
+              Acepto los términos de uso
+            </label>
+          </fieldset>
+        </form>
+      </section>
     </main>
-    <footer class="footer">
-      <section id="contacts"></section>
+    <footer class="footer" id="contacts">
+      <div class="footer__content">
+        <div class="footer__circle"></div>
+        <img
+          class="footer__logo"
+          src="./images/logo_coffeeshop_light.svg"
+          alt="Logo BootCafe Tripleten"
+        />
+        <div class="footer__social">
+          <h3 class="footer__social-heading">Redes sociales</h3>
+          <ul class="footer__list">
+            <li class="footer__list-item">
+              <a class="footer__social-link" href="#">
+                <img
+                  class="footer__social-icon"
+                  src="./images/facebook_white.svg"
+                  alt=""
+                />
+                Facebook
+              </a>
+            </li>
+            <li class="footer__list-item">
+              <a class="footer__social-link" href="#">
+                <img
+                  class="footer__social-icon"
+                  src="./images/instagram_white.svg"
+                  alt=""
+                />
+                Instagram
+              </a>
+            </li>
+          </ul>
+        </div>
+        <p class="footer__copyright">© 2026 Victor</p>
+      </div>
     </footer>
   </body>
 </html>
